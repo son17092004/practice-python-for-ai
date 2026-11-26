@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" style="--vscode-font-family: system-ui, &quot;Ubuntu&quot;, &quot;Droid Sans&quot;, sans-serif; --vscode-font-weight: normal; --vscode-font-size: 13px; --vscode-editor-font-family: 'Droid Sans Mono', monospace; --vscode-editor-font-weight: normal; --vscode-editor-font-size: 14px; --text-link-decoration: none; --vscode-foreground: #bfbfbf; --vscode-strongForeground: #ffffff; --vscode-disabledForeground: #555555; --vscode-errorForeground: #f48771; --vscode-descriptionForeground: #8c8c8c; --vscode-icon-foreground: #8c8c8c; --vscode-focusBorder: rgba(57, 148, 188, 0.7); --vscode-textLink-foreground: #48a0c7; --vscode-textLink-activeForeground: #53a5ca; --vscode-textSeparator-foreground: #2a2a2a; --vscode-textPreformat-foreground: #8c8c8c; --vscode-textPreformat-background: #262626; --vscode-textBlockQuote-background: #242526; --vscode-textBlockQuote-border: #2a2b2c; --vscode-textCodeBlock-background: #242526; --vscode-sash-hoverBorder: rgba(57, 148, 188, 0.7); --vscode-badge-background: #307e9f; --vscode-badge-foreground: #ffffff; --vscode-activityWarningBadge-foreground: #202020; --vscode-activityWarningBadge-background: #cca700; --vscode-activityErrorBadge-foreground: #ffffff; --vscode-activityErrorBadge-background: #f48771; --vscode-scrollbar-shadow: rgba(25, 27, 29, 0.3); --vscode-scrollbarSlider-background: rgba(168, 169, 170, 0.52); --vscode-scrollbarSlider-hoverBackground: rgba(168, 169, 170, 0.56); --vscode-scrollbarSlider-activeBackground: rgba(168, 169, 170, 0.61); --vscode-progressBar-background: #878889; --vscode-chart-line: #236b8e; --vscode-chart-axis: rgba(191, 191, 191, 0.4); --vscode-chart-guide: rgba(191, 191, 191, 0.2); --vscode-editor-background: #121314; --vscode-editor-foreground: #bbbebf; --vscode-editorStickyScroll-background: #121314; --vscode-editorStickyScrollGutter-background: #121314; --vscode-editorStickyScrollHover-background: #202122; --vscode-editorStickyScroll-border: #2a2b2c; --vscode-editorStickyScroll-shadow: rgba(25, 27, 29, 0.3); --vscode-editorWidget-background: #202122; --vscode-editorWidget-foreground: #bfbfbf; --vscode-editorWidget-border: #2a2b2c; --vscode-editorError-foreground: #f14c4c; --vscode-editorWarning-foreground: #cca700; --vscode-editorInfo-foreground: #59a4f9; --vscode-editorHint-foreground: rgba(238, 238, 238, 0.7); --vscode-editorLink-activeForeground: #3a94bc; --vscode-editor-selectionBackground: rgba(39, 103, 130, 0.87); --vscode-editor-inactiveSelectionBackground: rgba(39, 103, 130, 0.38); --vscode-editor-selectionHighlightBackground: rgba(39, 103, 130, 0.38); --vscode-editor-compositionBorder: #ffffff; --vscode-editor-findMatchBackground: rgba(39, 103, 130, 0.56); --vscode-editor-findMatchHighlightBackground: rgba(39, 103, 130, 0.5); --vscode-editor-findRangeHighlightBackground: rgba(255, 255, 255, 0.07); --vscode-editor-hoverHighlightBackground: rgba(255, 255, 255, 0.07); --vscode-editorHoverWidget-background: #202122; --vscode-editorHoverWidget-foreground: #bfbfbf; --vscode-editorHoverWidget-border: #2a2b2c; --vscode-editorHoverWidget-statusBarBackground: #262829; --vscode-editorInlayHint-foreground: #969696; --vscode-editorInlayHint-background: rgba(48, 126, 159, 0.1); --vscode-editorInlayHint-typeForeground: #969696; --vscode-editorInlayHint-typeBackground: rgba(48, 126, 159, 0.1); --vscode-editorInlayHint-parameterForeground: #969696; --vscode-editorInlayHint-parameterBackground: rgba(48, 126, 159, 0.1); --vscode-editorLightBulb-foreground: #ffcc00; --vscode-editorLightBulbAutoFix-foreground: #75beff; --vscode-editorLightBulbAi-foreground: #ffcc00; --vscode-editor-snippetTabstopHighlightBackground: rgba(124, 124, 124, 0.3); --vscode-editor-snippetFinalTabstopHighlightBorder: #525252; --vscode-diffEditor-insertedTextBackground: rgba(87, 171, 90, 0.3); --vscode-diffEditor-removedTextBackground: rgba(244, 112, 103, 0.3); --vscode-diffEditor-insertedLineBackground: rgba(52, 125, 57, 0.15); --vscode-diffEditor-removedLineBackground: rgba(201, 60, 55, 0.15); --vscode-diffEditor-diagonalFill: rgba(204, 204, 204, 0.2); --vscode-diffEditor-unchangedRegionBackground: #191a1b; --vscode-diffEditor-unchangedRegionForeground: #bfbfbf; --vscode-diffEditor-unchangedCodeBackground: rgba(116, 116, 116, 0.16); --vscode-widget-shadow: rgba(0, 0, 0, 0.36); --vscode-widget-border: #2a2b2c; --vscode-toolbar-hoverBackground: rgba(90, 93, 94, 0.31); --vscode-toolbar-activeBackground: rgba(255, 255, 255, 0.2); --vscode-breadcrumb-foreground: #8c8c8c; --vscode-breadcrumb-background: #121314; --vscode-breadcrumb-focusForeground: #bfbfbf; --vscode-breadcrumb-activeSelectionForeground: #bfbfbf; --vscode-breadcrumbPicker-background: #202122; --vscode-merge-currentHeaderBackground: rgba(64, 200, 174, 0.5); --vscode-merge-currentContentBackground: rgba(64, 200, 174, 0.2); --vscode-merge-incomingHeaderBackground: rgba(64, 166, 255, 0.5); --vscode-merge-incomingContentBackground: rgba(64, 166, 255, 0.2); --vscode-merge-commonHeaderBackground: rgba(96, 96, 96, 0.4); --vscode-merge-commonContentBackground: rgba(96, 96, 96, 0.16); --vscode-editorOverviewRuler-currentContentForeground: rgba(64, 200, 174, 0.5); --vscode-editorOverviewRuler-incomingContentForeground: rgba(64, 166, 255, 0.5); --vscode-editorOverviewRuler-commonContentForeground: rgba(96, 96, 96, 0.4); --vscode-editorOverviewRuler-findMatchForeground: rgba(58, 148, 188, 0.6); --vscode-editorOverviewRuler-selectionHighlightForeground: rgba(160, 160, 160, 0.8); --vscode-problemsErrorIcon-foreground: #f14c4c; --vscode-problemsWarningIcon-foreground: #cca700; --vscode-problemsInfoIcon-foreground: #59a4f9; --vscode-minimap-findMatchHighlight: rgba(39, 103, 130, 0.5); --vscode-minimap-selectionOccurrenceHighlight: rgba(39, 103, 130, 0.38); --vscode-minimap-selectionHighlight: rgba(39, 103, 130, 0.87); --vscode-minimap-infoHighlight: #59a4f9; --vscode-minimap-warningHighlight: #cca700; --vscode-minimap-errorHighlight: rgba(255, 18, 18, 0.7); --vscode-minimap-foregroundOpacity: #000000; --vscode-minimapSlider-background: rgba(168, 169, 170, 0.52); --vscode-minimapSlider-hoverBackground: rgba(168, 169, 170, 0.56); --vscode-minimapSlider-activeBackground: rgba(168, 169, 170, 0.61); --vscode-charts-foreground: #cccccc; --vscode-charts-lines: rgba(200, 202, 204, 0.5); --vscode-charts-red: #ef8773; --vscode-charts-blue: #57a3f8; --vscode-charts-yellow: #e0b97f; --vscode-charts-orange: #cd861a; --vscode-charts-green: #86cf86; --vscode-charts-purple: #ad80d7; --vscode-list-focusBackground: rgba(255, 255, 255, 0.13); --vscode-list-focusForeground: #bfbfbf; --vscode-list-focusOutline: rgba(57, 148, 188, 0.7); --vscode-list-activeSelectionBackground: rgba(255, 255, 255, 0.13); --vscode-list-activeSelectionForeground: #ededed; --vscode-list-activeSelectionIconForeground: #ffffff; --vscode-list-inactiveSelectionBackground: #2c2d2e; --vscode-list-inactiveSelectionForeground: #ededed; --vscode-list-hoverBackground: rgba(255, 255, 255, 0.08); --vscode-list-hoverForeground: #bfbfbf; --vscode-list-dropBackground: rgba(57, 148, 188, 0.1); --vscode-list-dropBetweenBackground: #8c8c8c; --vscode-list-highlightForeground: #48a0c7; --vscode-list-focusHighlightForeground: #48a0c7; --vscode-list-invalidItemForeground: #444444; --vscode-list-errorForeground: #f48771; --vscode-list-warningForeground: #e5ba7d; --vscode-listFilterWidget-background: #202122; --vscode-listFilterWidget-outline: rgba(0, 0, 0, 0); --vscode-listFilterWidget-noMatchesOutline: #be1100; --vscode-listFilterWidget-shadow: rgba(0, 0, 0, 0.36); --vscode-list-filterMatchBackground: rgba(39, 103, 130, 0.5); --vscode-list-deemphasizedForeground: #8c8c8c; --vscode-tree-indentGuidesStroke: #585858; --vscode-tree-inactiveIndentGuidesStroke: rgba(88, 88, 88, 0.4); --vscode-tree-tableColumnsBorder: rgba(204, 204, 204, 0.13); --vscode-tree-tableOddRowsBackground: rgba(191, 191, 191, 0.04); --vscode-editorActionList-background: #202122; --vscode-editorActionList-foreground: #bfbfbf; --vscode-editorActionList-focusForeground: #ededed; --vscode-editorActionList-focusBackground: rgba(255, 255, 255, 0.13); --vscode-input-background: #191a1b; --vscode-input-foreground: #bfbfbf; --vscode-input-border: #333536; --vscode-inputOption-activeBorder: #2a2b2c; --vscode-inputOption-hoverBackground: rgba(90, 93, 94, 0.5); --vscode-inputOption-activeBackground: #313233; --vscode-inputOption-activeForeground: #bfbfbf; --vscode-input-placeholderForeground: #555555; --vscode-inputValidation-infoBackground: #1e3a47; --vscode-inputValidation-infoForeground: #bfbfbf; --vscode-inputValidation-infoBorder: #3994bc; --vscode-inputValidation-warningBackground: #352a05; --vscode-inputValidation-warningForeground: #bfbfbf; --vscode-inputValidation-warningBorder: #b89500; --vscode-inputValidation-errorBackground: #3a1d1d; --vscode-inputValidation-errorForeground: #bfbfbf; --vscode-inputValidation-errorBorder: #be1100; --vscode-dropdown-background: #191a1b; --vscode-dropdown-listBackground: #191a1b; --vscode-dropdown-foreground: #bfbfbf; --vscode-dropdown-border: #333536; --vscode-button-foreground: #ffffff; --vscode-button-separator: rgba(255, 255, 255, 0.4); --vscode-button-background: #297aa0; --vscode-button-hoverBackground: #2b7da3; --vscode-button-border: #297aa0; --vscode-button-secondaryForeground: #cccccc; --vscode-button-secondaryBackground: rgba(0, 0, 0, 0); --vscode-button-secondaryBorder: #333536; --vscode-button-secondaryHoverBackground: rgba(255, 255, 255, 0.06); --vscode-radio-activeForeground: #bfbfbf; --vscode-radio-activeBackground: #313233; --vscode-radio-activeBorder: #2a2b2c; --vscode-radio-inactiveBorder: rgba(191, 191, 191, 0.2); --vscode-radio-inactiveHoverBackground: rgba(90, 93, 94, 0.5); --vscode-checkbox-background: #242526; --vscode-checkbox-selectBackground: #202122; --vscode-checkbox-foreground: #8c8c8c; --vscode-checkbox-border: #707070; --vscode-checkbox-selectBorder: #8c8c8c; --vscode-checkbox-disabled\.background: #464647; --vscode-checkbox-disabled\.foreground: #696a6a; --vscode-keybindingLabel-background: rgba(128, 128, 128, 0.17); --vscode-keybindingLabel-foreground: #cccccc; --vscode-keybindingLabel-border: rgba(51, 51, 51, 0.6); --vscode-keybindingLabel-bottomBorder: rgba(68, 68, 68, 0.6); --vscode-menu-border: #2a2b2c; --vscode-menu-foreground: #bfbfbf; --vscode-menu-background: #202122; --vscode-menu-selectionForeground: #bfbfbf; --vscode-menu-selectionBackground: rgba(57, 148, 188, 0.15); --vscode-menu-selectionBorder: #3994bc; --vscode-menu-separatorBackground: #2a2b2c; --vscode-quickInput-background: #202122; --vscode-quickInput-foreground: #bfbfbf; --vscode-quickInputTitle-background: #202122; --vscode-pickerGroup-foreground: #bfbfbf; --vscode-pickerGroup-border: #2a2b2c; --vscode-quickInputList-focusForeground: #ffffff; --vscode-quickInputList-focusIconForeground: #ffffff; --vscode-quickInputList-focusBackground: #297aa0; --vscode-quickInputList-focusHighlightForeground: #ffffff; --vscode-search-resultsInfoForeground: rgba(191, 191, 191, 0.65); --vscode-searchEditor-findMatchBackground: rgba(39, 103, 130, 0.33); --vscode-editor-lineHighlightBackground: #242526; --vscode-editor-inactiveLineHighlightBackground: #242526; --vscode-editor-lineHighlightBorder: #282828; --vscode-editor-rangeHighlightBackground: rgba(255, 255, 255, 0.07); --vscode-editor-symbolHighlightBackground: rgba(39, 103, 130, 0.5); --vscode-editorCursor-foreground: #bbbebf; --vscode-editorMultiCursor-primary\.foreground: #bbbebf; --vscode-editorMultiCursor-secondary\.foreground: #bbbebf; --vscode-editorWhitespace-foreground: rgba(140, 140, 140, 0.3); --vscode-editorWordWrapIndicator-foreground: rgba(140, 140, 140, 0.3); --vscode-editorLineNumber-foreground: #858889; --vscode-editorIndentGuide-background: rgba(140, 140, 140, 0.3); --vscode-editorIndentGuide-activeBackground: rgba(140, 140, 140, 0.3); --vscode-editorIndentGuide-background1: rgba(131, 132, 133, 0.3); --vscode-editorIndentGuide-background2: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-background3: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-background4: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-background5: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-background6: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-activeBackground1: #838485; --vscode-editorIndentGuide-activeBackground2: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-activeBackground3: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-activeBackground4: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-activeBackground5: rgba(0, 0, 0, 0); --vscode-editorIndentGuide-activeBackground6: rgba(0, 0, 0, 0); --vscode-editorActiveLineNumber-foreground: #c6c6c6; --vscode-editorLineNumber-activeForeground: #bbbebf; --vscode-editorRuler-foreground: #848484; --vscode-editorCodeLens-foreground: #8c8c8c; --vscode-editorBracketMatch-background: rgba(57, 148, 188, 0.33); --vscode-editorBracketMatch-border: #2a2b2c; --vscode-editorOverviewRuler-border: #2a2b2c; --vscode-editorGutter-background: #121314; --vscode-editorUnnecessaryCode-opacity: rgba(0, 0, 0, 0.67); --vscode-editorGhostText-foreground: rgba(255, 255, 255, 0.34); --vscode-editorOverviewRuler-rangeHighlightForeground: rgba(0, 122, 204, 0.6); --vscode-editorOverviewRuler-errorForeground: #f48771; --vscode-editorOverviewRuler-warningForeground: #e5ba7d; --vscode-editorOverviewRuler-infoForeground: #59a4f9; --vscode-editorBracketHighlight-foreground1: #ffd700; --vscode-editorBracketHighlight-foreground2: #da70d6; --vscode-editorBracketHighlight-foreground3: #179fff; --vscode-editorBracketHighlight-foreground4: rgba(0, 0, 0, 0); --vscode-editorBracketHighlight-foreground5: rgba(0, 0, 0, 0); --vscode-editorBracketHighlight-foreground6: rgba(0, 0, 0, 0); --vscode-editorBracketHighlight-unexpectedBracket\.foreground: rgba(255, 18, 18, 0.8); --vscode-editorBracketPairGuide-background1: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-background2: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-background3: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-background4: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-background5: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-background6: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-activeBackground1: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-activeBackground2: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-activeBackground3: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-activeBackground4: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-activeBackground5: rgba(0, 0, 0, 0); --vscode-editorBracketPairGuide-activeBackground6: rgba(0, 0, 0, 0); --vscode-editorUnicodeHighlight-border: #cca700; --vscode-diffEditor-move\.border: rgba(139, 139, 139, 0.61); --vscode-diffEditor-moveActive\.border: #ffa500; --vscode-diffEditor-unchangedRegionShadow: #000000; --vscode-editorOverviewRuler-bracketMatchForeground: #a0a0a0; --vscode-actionBar-toggledBackground: #383a49; --vscode-symbolIcon-arrayForeground: #bfbfbf; --vscode-symbolIcon-booleanForeground: #bfbfbf; --vscode-symbolIcon-classForeground: #ee9d28; --vscode-symbolIcon-colorForeground: #bfbfbf; --vscode-symbolIcon-constantForeground: #bfbfbf; --vscode-symbolIcon-constructorForeground: #b180d7; --vscode-symbolIcon-enumeratorForeground: #ee9d28; --vscode-symbolIcon-enumeratorMemberForeground: #75beff; --vscode-symbolIcon-eventForeground: #ee9d28; --vscode-symbolIcon-fieldForeground: #75beff; --vscode-symbolIcon-fileForeground: #bfbfbf; --vscode-symbolIcon-folderForeground: #bfbfbf; --vscode-symbolIcon-functionForeground: #b180d7; --vscode-symbolIcon-interfaceForeground: #75beff; --vscode-symbolIcon-keyForeground: #bfbfbf; --vscode-symbolIcon-keywordForeground: #bfbfbf; --vscode-symbolIcon-methodForeground: #b180d7; --vscode-symbolIcon-moduleForeground: #bfbfbf; --vscode-symbolIcon-namespaceForeground: #bfbfbf; --vscode-symbolIcon-nullForeground: #bfbfbf; --vscode-symbolIcon-numberForeground: #bfbfbf; --vscode-symbolIcon-objectForeground: #bfbfbf; --vscode-symbolIcon-operatorForeground: #bfbfbf; --vscode-symbolIcon-packageForeground: #bfbfbf; --vscode-symbolIcon-propertyForeground: #bfbfbf; --vscode-symbolIcon-referenceForeground: #bfbfbf; --vscode-symbolIcon-snippetForeground: #bfbfbf; --vscode-symbolIcon-stringForeground: #bfbfbf; --vscode-symbolIcon-structForeground: #bfbfbf; --vscode-symbolIcon-textForeground: #bfbfbf; --vscode-symbolIcon-typeParameterForeground: #bfbfbf; --vscode-symbolIcon-unitForeground: #bfbfbf; --vscode-symbolIcon-variableForeground: #75beff; --vscode-peekViewTitle-background: #242526; --vscode-peekViewTitleLabel-foreground: #bfbfbf; --vscode-peekViewTitleDescription-foreground: #8c8c8c; --vscode-peekView-border: #2a2b2c; --vscode-peekViewResult-background: #191a1b; --vscode-peekViewResult-lineForeground: #8c8c8c; --vscode-peekViewResult-fileForeground: #bfbfbf; --vscode-peekViewResult-selectionBackground: rgba(57, 148, 188, 0.15); --vscode-peekViewResult-selectionForeground: #bfbfbf; --vscode-peekViewEditor-background: #191a1b; --vscode-peekViewEditorGutter-background: #191a1b; --vscode-peekViewEditorStickyScroll-background: #191a1b; --vscode-peekViewEditorStickyScrollGutter-background: #191a1b; --vscode-peekViewResult-matchHighlightBackground: rgba(57, 148, 188, 0.2); --vscode-peekViewEditor-matchHighlightBackground: rgba(57, 148, 188, 0.2); --vscode-editor-foldBackground: rgba(39, 103, 130, 0.26); --vscode-editor-foldPlaceholderForeground: #808080; --vscode-editorGutter-foldingControlForeground: #8c8c8c; --vscode-editorMarkerNavigationError-background: #f14c4c; --vscode-editorMarkerNavigationError-headerBackground: rgba(241, 76, 76, 0.1); --vscode-editorMarkerNavigationWarning-background: #cca700; --vscode-editorMarkerNavigationWarning-headerBackground: rgba(204, 167, 0, 0.1); --vscode-editorMarkerNavigationInfo-background: #59a4f9; --vscode-editorMarkerNavigationInfo-headerBackground: rgba(89, 164, 249, 0.1); --vscode-editorMarkerNavigation-background: #121314; --vscode-editorSuggestWidget-background: #202122; --vscode-editorSuggestWidget-border: #2a2b2c; --vscode-editorSuggestWidget-foreground: #bfbfbf; --vscode-editorSuggestWidget-selectedForeground: #ffffff; --vscode-editorSuggestWidget-selectedIconForeground: #ffffff; --vscode-editorSuggestWidget-selectedBackground: rgba(255, 255, 255, 0.15); --vscode-editorSuggestWidget-focusOutline: rgba(57, 148, 188, 0.7); --vscode-editorSuggestWidget-highlightForeground: #bfbfbf; --vscode-editorSuggestWidget-focusHighlightForeground: #48a0c7; --vscode-editorSuggestWidgetStatus-foreground: rgba(191, 191, 191, 0.5); --vscode-inlineEdit-originalBackground: rgba(244, 112, 103, 0.06); --vscode-inlineEdit-modifiedBackground: rgba(87, 171, 90, 0.09); --vscode-inlineEdit-originalChangedLineBackground: rgba(244, 112, 103, 0.24); --vscode-inlineEdit-originalChangedTextBackground: rgba(244, 112, 103, 0.24); --vscode-inlineEdit-modifiedChangedLineBackground: rgba(52, 125, 57, 0.1); --vscode-inlineEdit-modifiedChangedTextBackground: rgba(87, 171, 90, 0.21); --vscode-inlineEdit-gutterIndicator\.primaryForeground: #ffffff; --vscode-inlineEdit-gutterIndicator\.primaryBorder: #297aa0; --vscode-inlineEdit-gutterIndicator\.primaryBackground: rgba(41, 122, 160, 0.4); --vscode-inlineEdit-gutterIndicator\.secondaryForeground: #bfbfbf; --vscode-inlineEdit-gutterIndicator\.secondaryBorder: #2a2b2c; --vscode-inlineEdit-gutterIndicator\.secondaryBackground: #202122; --vscode-inlineEdit-gutterIndicator\.successfulForeground: #ffffff; --vscode-inlineEdit-gutterIndicator\.successfulBorder: #297aa0; --vscode-inlineEdit-gutterIndicator\.successfulBackground: #297aa0; --vscode-inlineEdit-gutterIndicator\.background: rgba(25, 26, 27, 0.5); --vscode-inlineEdit-originalBorder: rgba(244, 112, 103, 0.3); --vscode-inlineEdit-modifiedBorder: rgba(87, 171, 90, 0.3); --vscode-inlineEdit-tabWillAcceptModifiedBorder: rgba(87, 171, 90, 0.3); --vscode-inlineEdit-tabWillAcceptOriginalBorder: rgba(244, 112, 103, 0.3); --vscode-editor-linkedEditingBackground: rgba(255, 0, 0, 0.3); --vscode-editor-wordHighlightBackground: rgba(39, 103, 130, 0.31); --vscode-editor-wordHighlightStrongBackground: rgba(39, 103, 130, 0.5); --vscode-editor-wordHighlightTextBackground: rgba(39, 103, 130, 0.31); --vscode-editorOverviewRuler-wordHighlightForeground: rgba(160, 160, 160, 0.8); --vscode-editorOverviewRuler-wordHighlightStrongForeground: rgba(192, 160, 192, 0.8); --vscode-editorOverviewRuler-wordHighlightTextForeground: rgba(160, 160, 160, 0.8); --vscode-editorHoverWidget-highlightForeground: #48a0c7; --vscode-editor-placeholder\.foreground: rgba(255, 255, 255, 0.34); --vscode-tab-activeBackground: #121314; --vscode-tab-unfocusedActiveBackground: #121314; --vscode-tab-inactiveBackground: #191a1b; --vscode-tab-unfocusedInactiveBackground: #191a1b; --vscode-tab-activeForeground: #bfbfbf; --vscode-tab-inactiveForeground: #8c8c8c; --vscode-tab-unfocusedActiveForeground: #8c8c8c; --vscode-tab-unfocusedInactiveForeground: #444444; --vscode-tab-hoverBackground: #121314; --vscode-tab-unfocusedHoverBackground: #1f1f1f; --vscode-tab-hoverForeground: #bfbfbf; --vscode-tab-unfocusedHoverForeground: rgba(191, 191, 191, 0.5); --vscode-tab-border: #2a2b2c; --vscode-tab-divider: #2a2b2c; --vscode-tab-lastPinnedBorder: #2a2b2c; --vscode-tab-activeBorder: #121314; --vscode-tab-unfocusedActiveBorder: #1f1f1f; --vscode-tab-activeBorderTop: #3994bc; --vscode-tab-unfocusedActiveBorderTop: #2b2b2b; --vscode-tab-selectedBorderTop: #6caddf; --vscode-tab-selectedBackground: #37373d; --vscode-tab-selectedForeground: #ffffff; --vscode-tab-dragAndDropBorder: #bfbfbf; --vscode-tab-activeModifiedBorder: #3399cc; --vscode-tab-inactiveModifiedBorder: rgba(51, 153, 204, 0.5); --vscode-tab-unfocusedActiveModifiedBorder: rgba(51, 153, 204, 0.5); --vscode-tab-unfocusedInactiveModifiedBorder: rgba(51, 153, 204, 0.25); --vscode-editorPane-background: #121314; --vscode-editorGroupHeader-tabsBackground: #191a1b; --vscode-editorGroupHeader-connectedTabsBackground: #202122; --vscode-editorGroupHeader-tabsBorder: #2a2b2c; --vscode-editorGroupHeader-noTabsBackground: #121314; --vscode-editorGroup-border: rgba(255, 255, 255, 0.09); --vscode-editorGroup-dropBackground: rgba(83, 89, 93, 0.5); --vscode-editorGroup-dropIntoPromptForeground: #bfbfbf; --vscode-editorGroup-dropIntoPromptBackground: #202122; --vscode-sideBySideEditor-horizontalBorder: rgba(255, 255, 255, 0.09); --vscode-sideBySideEditor-verticalBorder: rgba(255, 255, 255, 0.09); --vscode-banner-background: rgba(255, 255, 255, 0.13); --vscode-banner-foreground: #ededed; --vscode-banner-iconForeground: #59a4f9; --vscode-statusBar-foreground: #8c8c8c; --vscode-statusBar-noFolderForeground: #8c8c8c; --vscode-statusBar-background: #191a1b; --vscode-statusBar-inactiveBackground: #121314; --vscode-statusBar-noFolderBackground: #191a1b; --vscode-statusBar-border: #2a2b2c; --vscode-statusBar-focusBorder: rgba(57, 148, 188, 0.7); --vscode-statusBar-noFolderBorder: #2a2b2c; --vscode-statusBarItem-activeBackground: #4b4c4d; --vscode-statusBarItem-focusBorder: rgba(57, 148, 188, 0.7); --vscode-statusBarItem-hoverBackground: #323233; --vscode-statusBarItem-hoverForeground: #ffffff; --vscode-statusBarItem-compactHoverBackground: rgba(255, 255, 255, 0.12); --vscode-statusBarItem-prominentForeground: #ffffff; --vscode-statusBarItem-prominentBackground: #3994bc; --vscode-statusBarItem-prominentHoverForeground: #ffffff; --vscode-statusBarItem-prominentHoverBackground: #3994bc; --vscode-statusBarItem-errorBackground: #c72e0f; --vscode-statusBarItem-errorForeground: #ffffff; --vscode-statusBarItem-errorHoverForeground: #ffffff; --vscode-statusBarItem-errorHoverBackground: #323233; --vscode-statusBarItem-warningBackground: #7a6400; --vscode-statusBarItem-warningForeground: #ffffff; --vscode-statusBarItem-warningHoverForeground: #ffffff; --vscode-statusBarItem-warningHoverBackground: #323233; --vscode-activityBar-background: #191a1b; --vscode-activityBar-foreground: #bfbfbf; --vscode-activityBar-inactiveForeground: #8c8c8c; --vscode-activityBar-border: #2a2b2c; --vscode-activityBar-activeBorder: #bfbfbf; --vscode-activityBar-activeFocusBorder: rgba(57, 148, 188, 0.7); --vscode-activityBar-activeBackground: #313233; --vscode-activityBar-dropBorder: #bfbfbf; --vscode-activityBarBadge-background: #307e9f; --vscode-activityBarBadge-foreground: #ffffff; --vscode-activityBarTop-foreground: #e7e7e7; --vscode-activityBarTop-activeBorder: #bfbfbf; --vscode-activityBarTop-inactiveForeground: rgba(231, 231, 231, 0.6); --vscode-activityBarTop-dropBorder: #e7e7e7; --vscode-panel-background: #191a1b; --vscode-panel-border: #2a2b2c; --vscode-panelTitle-activeForeground: #bfbfbf; --vscode-panelTitle-inactiveForeground: #8c8c8c; --vscode-panelTitle-activeBorder: #3994bc; --vscode-panelTitleBadge-background: #307e9f; --vscode-panelTitleBadge-foreground: #ffffff; --vscode-panelInput-border: #2b2b2b; --vscode-panel-dropBorder: #bfbfbf; --vscode-panelSection-dropBackground: rgba(83, 89, 93, 0.5); --vscode-panelSectionHeader-background: rgba(128, 128, 128, 0.2); --vscode-panelSectionHeader-border: #2a2b2c; --vscode-panelSection-border: #2a2b2c; --vscode-panelStickyScroll-background: #191a1b; --vscode-panelStickyScroll-shadow: rgba(25, 27, 29, 0.3); --vscode-browser-border: rgba(0, 0, 0, 0); --vscode-profileBadge-background: #4d4d4d; --vscode-profileBadge-foreground: #ffffff; --vscode-statusBarItem-remoteBackground: #0078d4; --vscode-statusBarItem-remoteForeground: #ffffff; --vscode-statusBarItem-remoteHoverForeground: #ffffff; --vscode-statusBarItem-remoteHoverBackground: #323233; --vscode-statusBarItem-offlineBackground: #6c1717; --vscode-statusBarItem-offlineForeground: #ffffff; --vscode-statusBarItem-offlineHoverForeground: #ffffff; --vscode-statusBarItem-offlineHoverBackground: #323233; --vscode-extensionBadge-remoteBackground: #307e9f; --vscode-extensionBadge-remoteForeground: #ffffff; --vscode-sideBar-background: #191a1b; --vscode-sideBar-foreground: #bfbfbf; --vscode-sideBar-border: #2a2b2c; --vscode-sideBarTitle-background: #191a1b; --vscode-sideBarTitle-foreground: #bfbfbf; --vscode-sideBar-dropBackground: rgba(83, 89, 93, 0.5); --vscode-sideBarSectionHeader-background: #191a1b; --vscode-sideBarSectionHeader-foreground: #bfbfbf; --vscode-sideBarSectionHeader-border: #2a2b2c; --vscode-sideBarActivityBarTop-border: #2a2b2c; --vscode-sideBarStickyScroll-background: #191a1b; --vscode-sideBarStickyScroll-shadow: rgba(25, 27, 29, 0.3); --vscode-surface-background: #191a1b; --vscode-surface-foreground: #bfbfbf; --vscode-surface-border: #2a2b2c; --vscode-editor-border: #2a2b2c; --vscode-modernPanel-border: #2a2b2c; --vscode-modernSash-gripForeground: rgba(191, 191, 191, 0.4); --vscode-modernTab-activeBackground: #2c2d2e; --vscode-modernTab-activeForeground: #ededed; --vscode-modernTab-hoverBackground: rgba(255, 255, 255, 0.08); --vscode-modernTab-hoverForeground: #bfbfbf; --vscode-modernEditorTab-activeBackground: #2c2d2e; --vscode-modernEditorTab-activeActionBackground: #2c2d2e; --vscode-modernEditorTab-activeForeground: #ededed; --vscode-modernEditorTab-inactiveBackground: rgba(0, 0, 0, 0); --vscode-modernEditorTab-hoverBackground: rgba(255, 255, 255, 0.08); --vscode-modernEditorTab-hoverActionBackground: #242526; --vscode-modernEditorTab-hoverForeground: #bfbfbf; --vscode-modernEditorTab-activeHoverBackground: rgba(255, 255, 255, 0.08); --vscode-modernEditorTab-activeHoverActionBackground: #242526; --vscode-modernEditorTab-selectedActionBackground: #37373d; --vscode-modernActivityBar-background: #191a1b; --vscode-modernActivityBar-inactiveBackground: #191a1b; --vscode-modernActivityBarItem-activeBackground: rgba(255, 255, 255, 0.13); --vscode-modernActivityBarItem-activeForeground: #ededed; --vscode-modernActivityBarItem-hoverBackground: rgba(255, 255, 255, 0.07); --vscode-modernActivityBarItem-hoverForeground: #bfbfbf; --vscode-modernActivityBar-border: #252526; --vscode-titleBar-activeForeground: #8c8c8c; --vscode-titleBar-inactiveForeground: #8c8c8c; --vscode-titleBar-activeBackground: #191a1b; --vscode-titleBar-inactiveBackground: #121314; --vscode-modernUI-shellBackground: #191a1b; --vscode-modernUI-inactiveShellBackground: #121314; --vscode-titleBar-border: #2a2b2c; --vscode-menubar-selectionForeground: #bfbfbf; --vscode-menubar-selectionBackground: #242526; --vscode-commandCenter-foreground: #bfbfbf; --vscode-commandCenter-activeForeground: #bfbfbf; --vscode-commandCenter-inactiveForeground: #8c8c8c; --vscode-commandCenter-background: #191a1b; --vscode-commandCenter-activeBackground: rgba(255, 255, 255, 0.06); --vscode-commandCenter-border: #2e3031; --vscode-commandCenter-activeBorder: #333536; --vscode-commandCenter-inactiveBorder: rgba(140, 140, 140, 0.25); --vscode-notificationCenter-border: #2a2b2c; --vscode-notificationToast-border: #2a2b2c; --vscode-notifications-foreground: #bfbfbf; --vscode-notifications-background: #202122; --vscode-notificationLink-foreground: #3a94bc; --vscode-notificationCenterHeader-foreground: #bfbfbf; --vscode-notificationCenterHeader-background: #242526; --vscode-notifications-border: #2a2b2c; --vscode-notificationsErrorIcon-foreground: #f48771; --vscode-notificationsWarningIcon-foreground: #cca700; --vscode-notificationsInfoIcon-foreground: #3a94bc; --vscode-agentSessionReadIndicator-foreground: rgba(191, 191, 191, 0.2); --vscode-agentSessionSelectedBadge-border: rgba(237, 237, 237, 0.3); --vscode-agentSessionSelectedUnfocusedBadge-border: rgba(191, 191, 191, 0.3); --vscode-editorGutter-modifiedBackground: #0078d4; --vscode-editorGutter-modifiedSecondaryBackground: #003c6a; --vscode-editorGutter-addedBackground: #72c892; --vscode-editorGutter-addedSecondaryBackground: #2c7145; --vscode-editorGutter-deletedBackground: #f28772; --vscode-editorGutter-deletedSecondaryBackground: #c43012; --vscode-minimapGutter-modifiedBackground: #0078d4; --vscode-minimapGutter-addedBackground: #72c892; --vscode-minimapGutter-deletedBackground: #f28772; --vscode-editorOverviewRuler-modifiedForeground: #6ab890; --vscode-editorOverviewRuler-addedForeground: #73c991; --vscode-editorOverviewRuler-deletedForeground: #f48771; --vscode-editorGutter-itemGlyphForeground: #bbbebf; --vscode-editorGutter-itemBackground: #2c2d2e; --vscode-terminal-background: #191a1b; --vscode-terminal-foreground: #cccccc; --vscode-terminalCursor-foreground: #bfbfbf; --vscode-terminalCursor-background: #191a1b; --vscode-terminal-selectionBackground: rgba(57, 148, 188, 0.2); --vscode-terminal-inactiveSelectionBackground: #3a3d41; --vscode-terminalCommandDecoration-defaultBackground: rgba(255, 255, 255, 0.25); --vscode-terminalCommandDecoration-successBackground: #1b81a8; --vscode-terminalCommandDecoration-errorBackground: #f14c4c; --vscode-terminalOverviewRuler-cursorForeground: rgba(160, 160, 160, 0.8); --vscode-terminal-border: #2a2b2c; --vscode-terminalOverviewRuler-border: #2a2b2c; --vscode-terminal-findMatchBackground: rgba(39, 103, 130, 0.56); --vscode-terminal-hoverHighlightBackground: rgba(255, 255, 255, 0.04); --vscode-terminal-findMatchHighlightBackground: rgba(39, 103, 130, 0.5); --vscode-terminalOverviewRuler-findMatchForeground: rgba(58, 148, 188, 0.6); --vscode-terminal-dropBackground: rgba(83, 89, 93, 0.5); --vscode-terminal-tab\.activeBorder: rgba(57, 148, 188, 0); --vscode-terminal-initialHintForeground: rgba(255, 255, 255, 0.34); --vscode-scmGraph-historyItemRefColor: #57a3f8; --vscode-scmGraph-historyItemRemoteRefColor: #ad80d7; --vscode-scmGraph-historyItemBaseRefColor: #ea5c00; --vscode-scmGraph-historyItemHoverDefaultLabelForeground: #bfbfbf; --vscode-scmGraph-historyItemHoverDefaultLabelBackground: #307e9f; --vscode-scmGraph-historyItemHoverLabelForeground: #191a1b; --vscode-scmGraph-historyItemHoverAdditionsForeground: #81b88b; --vscode-scmGraph-historyItemHoverDeletionsForeground: #c74e39; --vscode-scmGraph-foreground1: #ffb000; --vscode-scmGraph-foreground2: #dc267f; --vscode-scmGraph-foreground3: #994f00; --vscode-scmGraph-foreground4: #40b0a6; --vscode-scmGraph-foreground5: #b66dff; --vscode-commentsView-resolvedIcon: #555555; --vscode-commentsView-unresolvedIcon: rgba(57, 148, 188, 0.7); --vscode-editorCommentsWidget-replyInputBackground: #242526; --vscode-editorCommentsWidget-resolvedBorder: #555555; --vscode-editorCommentsWidget-unresolvedBorder: rgba(57, 148, 188, 0.7); --vscode-editorCommentsWidget-rangeBackground: rgba(72, 143, 174, 0.15); --vscode-editorCommentsWidget-rangeActiveBackground: rgba(72, 143, 174, 0.28); --vscode-editorGutter-commentRangeForeground: #2c2d2e; --vscode-editorOverviewRuler-commentForeground: #2c2d2e; --vscode-editorOverviewRuler-commentUnresolvedForeground: #2c2d2e; --vscode-editorOverviewRuler-commentDraftForeground: #2c2d2e; --vscode-editorGutter-commentGlyphForeground: #bbbebf; --vscode-editorGutter-commentUnresolvedGlyphForeground: #bbbebf; --vscode-editorGutter-commentDraftGlyphForeground: #bbbebf; --vscode-agentsVoice-speakingForeground: #a371f7; --vscode-agentsVoice-speakingBackground: rgba(163, 113, 247, 0.08); --vscode-agents-background: #121314; --vscode-agentsPanel-background: #191a1b; --vscode-agentsDetail-background: #121314; --vscode-agentsPanel-foreground: #bfbfbf; --vscode-agentsPanel-border: #2a2b2c; --vscode-agentsCard-border: #2a2b2c; --vscode-agentsBottomPanel-border: #2a2b2c; --vscode-agentsGradient-tintColor: #297aa0; --vscode-agentFeedbackEditorWidget-background: #222325; --vscode-agentFeedbackEditorWidget-border: rgba(191, 191, 191, 0.35); --vscode-agentFeedbackInputWidget-border: #2a2b2c; --vscode-agentsUpdateButton-downloadingBackground: rgba(41, 122, 160, 0.4); --vscode-agentsUpdateButton-downloadedBackground: rgba(41, 122, 160, 0.7); --vscode-agentsChatInput-background: #202122; --vscode-agentsChatInput-foreground: #bfbfbf; --vscode-agentsChatInput-border: #333536; --vscode-agentsChatInput-focusBorder: rgba(57, 148, 188, 0.7); --vscode-agentsChatInput-placeholderForeground: #555555; --vscode-agentsNewSessionButton-background: rgba(0, 0, 0, 0); --vscode-agentsNewSessionButton-foreground: #bfbfbf; --vscode-agentsNewSessionButton-border: #333536; --vscode-agentsNewSessionButton-hoverBackground: rgba(255, 255, 255, 0.09); --vscode-agentsBadge-background: #307e9f; --vscode-agentsBadge-foreground: #ffffff; --vscode-agentsUnreadBadge-background: #307e9f; --vscode-agentsUnreadBadge-foreground: #ffffff; --vscode-activeSessionView-background: #191a1b; --vscode-inactiveSessionView-background: #121314; --vscode-activeSessionView-foreground: #bfbfbf; --vscode-inactiveSessionView-foreground: #bfbfbf; --vscode-ports-iconRunningProcessForeground: #369432; --vscode-settings-headerForeground: #ffffff; --vscode-settings-settingsHeaderHoverForeground: rgba(255, 255, 255, 0.7); --vscode-settings-modifiedItemIndicator: rgba(187, 128, 9, 0.4); --vscode-settings-headerBorder: #2a2b2c; --vscode-settings-sashBorder: #2a2b2c; --vscode-settings-dropdownBackground: #313131; --vscode-settings-dropdownForeground: #bfbfbf; --vscode-settings-dropdownBorder: #3c3c3c; --vscode-settings-dropdownListBorder: #2a2b2c; --vscode-settings-checkboxBackground: #242526; --vscode-settings-checkboxForeground: #8c8c8c; --vscode-settings-checkboxBorder: #707070; --vscode-settings-textInputBackground: #191a1b; --vscode-settings-textInputForeground: #bfbfbf; --vscode-settings-textInputBorder: #333536; --vscode-settings-numberInputBackground: #191a1b; --vscode-settings-numberInputForeground: #bfbfbf; --vscode-settings-numberInputBorder: #333536; --vscode-settings-focusedRowBackground: rgba(255, 255, 255, 0.05); --vscode-settings-rowHoverBackground: rgba(255, 255, 255, 0.02); --vscode-settings-focusedRowBorder: rgba(57, 148, 188, 0.7); --vscode-keybindingTable-headerBackground: rgba(191, 191, 191, 0.04); --vscode-keybindingTable-rowsBackground: rgba(191, 191, 191, 0.04); --vscode-extensionButton-background: rgba(0, 0, 0, 0); --vscode-extensionButton-foreground: #cccccc; --vscode-extensionButton-hoverBackground: rgba(255, 255, 255, 0.06); --vscode-extensionButton-border: #333536; --vscode-extensionButton-separator: rgba(255, 255, 255, 0.4); --vscode-extensionButton-prominentBackground: #297aa0; --vscode-extensionButton-prominentForeground: #ffffff; --vscode-extensionButton-prominentHoverBackground: #2b7da3; --vscode-debugToolBar-background: #181818; --vscode-debugIcon-startForeground: #89d185; --vscode-notebook-cellBorderColor: #2c2d2e; --vscode-notebook-focusedEditorBorder: rgba(57, 148, 188, 0.7); --vscode-notebookStatusSuccessIcon-foreground: #89d185; --vscode-notebookEditorOverviewRuler-runningCellForeground: #89d185; --vscode-notebookStatusErrorIcon-foreground: #f48771; --vscode-notebookStatusRunningIcon-foreground: #bfbfbf; --vscode-notebook-cellToolbarSeparator: rgba(128, 128, 128, 0.35); --vscode-notebook-selectedCellBackground: #2c2d2e; --vscode-notebook-selectedCellBorder: #2c2d2e; --vscode-notebook-focusedCellBorder: rgba(57, 148, 188, 0.7); --vscode-notebook-inactiveFocusedCellBorder: #2c2d2e; --vscode-notebook-cellStatusBarItemHoverBackground: rgba(255, 255, 255, 0.15); --vscode-notebook-cellInsertionIndicator: rgba(57, 148, 188, 0.7); --vscode-notebookScrollbarSlider-background: rgba(168, 169, 170, 0.52); --vscode-notebookScrollbarSlider-hoverBackground: rgba(168, 169, 170, 0.56); --vscode-notebookScrollbarSlider-activeBackground: rgba(168, 169, 170, 0.61); --vscode-notebook-symbolHighlightBackground: rgba(255, 255, 255, 0.04); --vscode-notebook-cellEditorBackground: #191a1b; --vscode-notebook-editorBackground: #121314; --vscode-inlineChat-foreground: #bfbfbf; --vscode-inlineChat-background: #202122; --vscode-inlineChat-border: rgba(0, 0, 0, 0); --vscode-inlineChat-shadow: rgba(0, 0, 0, 0.36); --vscode-inlineChatInput-border: #2a2b2c; --vscode-inlineChatInput-focusBorder: rgba(57, 148, 188, 0.7); --vscode-inlineChatInput-placeholderForeground: #555555; --vscode-inlineChatInput-background: #191a1b; --vscode-inlineChatDiff-inserted: rgba(87, 171, 90, 0.15); --vscode-editorOverviewRuler-inlineChatInserted: rgba(87, 171, 90, 0.18); --vscode-editorMinimap-inlineChatInserted: rgba(87, 171, 90, 0.18); --vscode-inlineChatDiff-removed: rgba(244, 112, 103, 0.15); --vscode-editorOverviewRuler-inlineChatRemoved: rgba(244, 112, 103, 0.18); --vscode-agentStatusIndicator-background: #191a1b; --vscode-chat-requestBorder: rgba(255, 255, 255, 0.1); --vscode-chat-requestBackground: rgba(18, 19, 20, 0.62); --vscode-chat-statusBackground: rgba(191, 191, 191, 0.08); --vscode-chat-sessionStateIndicator\.inProgressBorder: #e0b97f; --vscode-chat-sessionStateIndicator\.unvisitedBorder: #86cf86; --vscode-chat-sessionStateIndicator\.needsInputBorder: #f48771; --vscode-chat-slashCommandBackground: rgba(38, 71, 120, 0.4); --vscode-chat-slashCommandForeground: #85b6ff; --vscode-chat-avatarBackground: #1f1f1f; --vscode-chat-avatarForeground: #bfbfbf; --vscode-chat-editedFileForeground: #e2c08d; --vscode-chat-requestCodeBorder: rgba(0, 73, 114, 0.72); --vscode-chat-requestBubbleBackground: rgba(255, 255, 255, 0.07); --vscode-chat-requestBubbleHoverBackground: rgba(255, 255, 255, 0.13); --vscode-chat-checkpointSeparator: #585858; --vscode-chat-linesAddedForeground: #54b054; --vscode-chat-linesRemovedForeground: #fc6a6a; --vscode-chat-findMatchHighlightBackground: rgba(39, 103, 130, 0.5); --vscode-chat-findMatchBackground: #276782; --vscode-chat-thinkingShimmer: #ffffff; --vscode-chat-workingProgressStableIconForeground: #007acc; --vscode-chat-workingProgressInsidersIconForeground: #24bfa5; --vscode-chat-inputWorkingBorderColor1: #297aa0; --vscode-chat-inputWorkingBorderColor2: #143d50; --vscode-chat-inputWorkingBorderColor3: #59add4; --vscode-chat-voiceGlowBaseColor: rgba(57, 148, 188, 0.7); --vscode-chat-dictationActiveMicGlow: rgba(57, 148, 188, 0.7); --vscode-extensionIcon-verifiedForeground: #48a0c7; --vscode-extensionIcon-starForeground: #ff8e00; --vscode-extensionIcon-preReleaseForeground: #1d9271; --vscode-extensionIcon-sponsorForeground: #d758b3; --vscode-extensionIcon-privateForeground: rgba(255, 255, 255, 0.38); --vscode-simpleFindWidget-sashBorder: #454545; --vscode-debugExceptionWidget-border: #a31515; --vscode-debugExceptionWidget-background: #420b0d; --vscode-editor-inlineValuesForeground: rgba(255, 255, 255, 0.5); --vscode-editor-inlineValuesBackground: rgba(255, 200, 0, 0.2); --vscode-debugIcon-breakpointForeground: #e51400; --vscode-debugIcon-breakpointDisabledForeground: #848484; --vscode-debugIcon-breakpointUnverifiedForeground: #848484; --vscode-debugIcon-breakpointCurrentStackframeForeground: #ffcc00; --vscode-debugIcon-breakpointStackframeForeground: #89d185; --vscode-editor-stackFrameHighlightBackground: rgba(255, 255, 0, 0.2); --vscode-editor-focusedStackFrameHighlightBackground: rgba(122, 189, 122, 0.3); --vscode-multiDiffEditor-headerBackground: #262626; --vscode-multiDiffEditor-background: #121314; --vscode-multiDiffEditor-border: #2a2b2c; --vscode-chat-mcpCompatibilityWarningForeground: #cca700; --vscode-minimap-chatEditHighlight: rgba(18, 19, 20, 0.6); --vscode-mcpIcon-starForeground: #ff8e00; --vscode-interactive-activeCodeBorder: #2a2b2c; --vscode-interactive-inactiveCodeBorder: #2c2d2e; --vscode-testing-iconFailed: #f48771; --vscode-testing-iconErrored: #f48771; --vscode-testing-iconPassed: #73c991; --vscode-testing-runAction: #73c991; --vscode-testing-iconQueued: #e5ba7d; --vscode-testing-iconUnset: #848484; --vscode-testing-iconSkipped: #848484; --vscode-testing-peekBorder: #f14c4c; --vscode-testing-messagePeekBorder: #59a4f9; --vscode-testing-peekHeaderBackground: rgba(241, 76, 76, 0.1); --vscode-testing-messagePeekHeaderBackground: rgba(89, 164, 249, 0.1); --vscode-testing-coveredBackground: rgba(87, 171, 90, 0.3); --vscode-testing-coveredBorder: rgba(87, 171, 90, 0.23); --vscode-testing-coveredGutterBackground: rgba(87, 171, 90, 0.18); --vscode-testing-uncoveredBranchBackground: #9a4b46; --vscode-testing-uncoveredBackground: rgba(244, 112, 103, 0.3); --vscode-testing-uncoveredBorder: rgba(244, 112, 103, 0.23); --vscode-testing-uncoveredGutterBackground: rgba(244, 112, 103, 0.45); --vscode-testing-coveredMinimapBackground: rgba(87, 171, 90, 0.18); --vscode-testing-uncoveredMinimapBackground: rgba(244, 112, 103, 0.45); --vscode-testing-coverCountBadgeBackground: #307e9f; --vscode-testing-coverCountBadgeForeground: #ffffff; --vscode-testing-message\.error\.badgeBackground: #f48771; --vscode-testing-message\.error\.badgeBorder: #f48771; --vscode-testing-message\.error\.badgeForeground: #ffffff; --vscode-testing-message\.info\.decorationForeground: rgba(187, 190, 191, 0.5); --vscode-testing-iconErrored\.retired: rgba(244, 135, 113, 0.7); --vscode-testing-iconFailed\.retired: rgba(244, 135, 113, 0.7); --vscode-testing-iconPassed\.retired: rgba(115, 201, 145, 0.7); --vscode-testing-iconQueued\.retired: rgba(229, 186, 125, 0.7); --vscode-testing-iconUnset\.retired: rgba(132, 132, 132, 0.7); --vscode-testing-iconSkipped\.retired: rgba(132, 132, 132, 0.7); --vscode-searchEditor-textInputBorder: #333536; --vscode-statusBar-debuggingBackground: #3994bc; --vscode-statusBar-debuggingForeground: #ffffff; --vscode-statusBar-debuggingBorder: #2a2b2c; --vscode-commandCenter-debuggingBackground: rgba(57, 148, 188, 0.26); --vscode-debugTokenExpression-name: #c586c0; --vscode-debugTokenExpression-type: #4a90e2; --vscode-debugTokenExpression-value: rgba(204, 204, 204, 0.6); --vscode-debugTokenExpression-string: #ce9178; --vscode-debugTokenExpression-boolean: #4e94ce; --vscode-debugTokenExpression-number: #b5cea8; --vscode-debugTokenExpression-error: #f48771; --vscode-debugView-exceptionLabelForeground: #bfbfbf; --vscode-debugView-exceptionLabelBackground: #6c2022; --vscode-debugView-stateLabelForeground: #bfbfbf; --vscode-debugView-stateLabelBackground: rgba(136, 136, 136, 0.27); --vscode-debugView-valueChangedHighlight: #569cd6; --vscode-debugConsole-infoForeground: #59a4f9; --vscode-debugConsole-warningForeground: #cca700; --vscode-debugConsole-errorForeground: #f48771; --vscode-debugConsole-sourceForeground: #bfbfbf; --vscode-debugConsoleInputIcon-foreground: #bfbfbf; --vscode-debugIcon-pauseForeground: #75beff; --vscode-debugIcon-stopForeground: #f48771; --vscode-debugIcon-disconnectForeground: #f48771; --vscode-debugIcon-restartForeground: #89d185; --vscode-debugIcon-stepOverForeground: #75beff; --vscode-debugIcon-stepIntoForeground: #75beff; --vscode-debugIcon-stepOutForeground: #75beff; --vscode-debugIcon-continueForeground: #75beff; --vscode-debugIcon-stepBackForeground: #75beff; --vscode-mergeEditor-change\.background: rgba(155, 185, 85, 0.2); --vscode-mergeEditor-change\.word\.background: rgba(156, 204, 44, 0.2); --vscode-mergeEditor-changeBase\.background: #4b1818; --vscode-mergeEditor-changeBase\.word\.background: #6f1313; --vscode-mergeEditor-conflict\.unhandledUnfocused\.border: rgba(255, 166, 0, 0.48); --vscode-mergeEditor-conflict\.unhandledFocused\.border: #ffa600; --vscode-mergeEditor-conflict\.handledUnfocused\.border: rgba(134, 134, 134, 0.29); --vscode-mergeEditor-conflict\.handledFocused\.border: rgba(193, 193, 193, 0.8); --vscode-mergeEditor-conflict\.handled\.minimapOverViewRuler: rgba(173, 172, 168, 0.93); --vscode-mergeEditor-conflict\.unhandled\.minimapOverViewRuler: #fcba03; --vscode-mergeEditor-conflictingLines\.background: rgba(255, 234, 0, 0.28); --vscode-mergeEditor-conflict\.input1\.background: rgba(64, 200, 174, 0.2); --vscode-mergeEditor-conflict\.input2\.background: rgba(64, 166, 255, 0.2); --vscode-terminal-ansiBlack: #000000; --vscode-terminal-ansiRed: #cd3131; --vscode-terminal-ansiGreen: #0dbc79; --vscode-terminal-ansiYellow: #e5e510; --vscode-terminal-ansiBlue: #2472c8; --vscode-terminal-ansiMagenta: #bc3fbc; --vscode-terminal-ansiCyan: #11a8cd; --vscode-terminal-ansiWhite: #e5e5e5; --vscode-terminal-ansiBrightBlack: #666666; --vscode-terminal-ansiBrightRed: #f14c4c; --vscode-terminal-ansiBrightGreen: #23d18b; --vscode-terminal-ansiBrightYellow: #f5f543; --vscode-terminal-ansiBrightBlue: #3b8eea; --vscode-terminal-ansiBrightMagenta: #d670d6; --vscode-terminal-ansiBrightCyan: #29b8db; --vscode-terminal-ansiBrightWhite: #e5e5e5; --vscode-terminalStickyScrollHover-background: #2a2d2e; --vscode-terminalCommandGuide-foreground: #2c2d2e; --vscode-terminalSymbolIcon-flagForeground: #ee9d28; --vscode-terminalSymbolIcon-aliasForeground: #b180d7; --vscode-terminalSymbolIcon-optionValueForeground: #75beff; --vscode-terminalSymbolIcon-methodForeground: #b180d7; --vscode-terminalSymbolIcon-argumentForeground: #75beff; --vscode-terminalSymbolIcon-optionForeground: #ee9d28; --vscode-terminalSymbolIcon-fileForeground: #bfbfbf; --vscode-terminalSymbolIcon-folderForeground: #bfbfbf; --vscode-terminalSymbolIcon-commitForeground: #bfbfbf; --vscode-terminalSymbolIcon-branchForeground: #bfbfbf; --vscode-terminalSymbolIcon-tagForeground: #bfbfbf; --vscode-terminalSymbolIcon-stashForeground: #bfbfbf; --vscode-terminalSymbolIcon-remoteForeground: #bfbfbf; --vscode-terminalSymbolIcon-pullRequestForeground: #bfbfbf; --vscode-terminalSymbolIcon-pullRequestDoneForeground: #bfbfbf; --vscode-terminalSymbolIcon-symbolicLinkFileForeground: #bfbfbf; --vscode-terminalSymbolIcon-symbolicLinkFolderForeground: #bfbfbf; --vscode-terminalSymbolIcon-symbolText: #bfbfbf; --vscode-markdownAlert-note\.foreground: #59a4f9; --vscode-markdownAlert-tip\.foreground: #86cf86; --vscode-markdownAlert-important\.foreground: #ad80d7; --vscode-markdownAlert-warning\.foreground: #cca700; --vscode-markdownAlert-caution\.foreground: #f14c4c; --vscode-welcomePage-tileBackground: #2b2b2b; --vscode-welcomePage-tileHoverBackground: #262829; --vscode-welcomePage-tileBorder: rgba(255, 255, 255, 0.1); --vscode-welcomePage-progress\.background: #191a1b; --vscode-welcomePage-progress\.foreground: #0078d4; --vscode-walkthrough-stepTitle\.foreground: #ffffff; --vscode-walkThrough-embeddedEditorBackground: rgba(0, 0, 0, 0.4); --vscode-profiles-sashBorder: #2a2b2c; --vscode-gitDecoration-addedResourceForeground: #73c991; --vscode-gitDecoration-modifiedResourceForeground: #e5ba7d; --vscode-gitDecoration-deletedResourceForeground: #f48771; --vscode-gitDecoration-renamedResourceForeground: #73c991; --vscode-gitDecoration-untrackedResourceForeground: #73c991; --vscode-gitDecoration-ignoredResourceForeground: #8c8c8c; --vscode-gitDecoration-stageModifiedResourceForeground: #e5ba7d; --vscode-gitDecoration-stageDeletedResourceForeground: #f48771; --vscode-gitDecoration-conflictingResourceForeground: #f48771; --vscode-gitDecoration-submoduleResourceForeground: #8db9e2; --vscode-git-blame\.editorDecorationForeground: #969696; --vscode-rainbowtrack1: #ff0000; --vscode-rainbowtrack2: #00ff00; --vscode-rainbowtrack3: #0000ff; --vscode-agents-layout-floatingPanelGap: 4px; --vscode-agents-fontSize-heading1: 26px; --vscode-agents-fontSize-heading2: 18px; --vscode-agents-fontSize-heading3: 13px; --vscode-agents-fontSize-body1: 13px; --vscode-agents-fontSize-body2: 11px; --vscode-agents-fontSize-label1: 12px; --vscode-agents-fontSize-label2: 11px; --vscode-agents-fontSize-label3: 10px; --vscode-agents-fontWeight-regular: 400; --vscode-agents-fontWeight-semiBold: 600; --vscode-bodyFontSize: 13px; --vscode-bodyFontSize-small: 12px; --vscode-bodyFontSize-xSmall: 11px; --vscode-fontSize-heading1: 26px; --vscode-fontSize-heading2: 18px; --vscode-fontSize-heading3: 13px; --vscode-fontSize-body1: 13px; --vscode-fontSize-body2: 11px; --vscode-fontSize-label1: 12px; --vscode-fontSize-label2: 11px; --vscode-fontSize-label3: 10px; --vscode-fontWeight-regular: 400; --vscode-fontWeight-semiBold: 600; --vscode-codiconFontSize: 16px; --vscode-codiconFontSize-compact: 12px; --vscode-cornerRadius-medium: 6px; --vscode-cornerRadius-xSmall: 2px; --vscode-cornerRadius-small: 4px; --vscode-cornerRadius-large: 8px; --vscode-cornerRadius-xLarge: 12px; --vscode-cornerRadius-circle: 9999px; --vscode-strokeThickness: 1px; --vscode-spacing-sizeNone: 0px; --vscode-spacing-size20: 2px; --vscode-spacing-size40: 4px; --vscode-spacing-size60: 6px; --vscode-spacing-size80: 8px; --vscode-spacing-size100: 10px; --vscode-spacing-size120: 12px; --vscode-spacing-size160: 16px; --vscode-spacing-size200: 20px; --vscode-spacing-size240: 24px; --vscode-spacing-size280: 28px; --vscode-spacing-size320: 32px; --vscode-spacing-size360: 36px; --vscode-spacing-size400: 40px; --vscode-editor-font-feature-settings: &quot;liga&quot; off, &quot;calt&quot; off;"><head><style id="_defaultStyles">
+		@layer vscode-default {
+			html {
+				scrollbar-color: var(--vscode-scrollbarSlider-background) var(--vscode-editor-background);
+			}
+
+			body {
+				overscroll-behavior-x: none;
+				background-color: transparent;
+				color: var(--vscode-editor-foreground);
+				font-family: var(--vscode-font-family);
+				font-weight: var(--vscode-font-weight);
+				font-size: var(--vscode-font-size);
+				margin: 0;
+				padding: 0 20px;
+			}
+
+			img, video {
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+			a, a code {
+				color: var(--vscode-textLink-foreground);
+			}
+
+			p > a {
+				text-decoration: var(--text-link-decoration);
+			}
+
+			a:hover {
+				color: var(--vscode-textLink-activeForeground);
+			}
+
+			a:focus,
+			input:focus,
+			select:focus,
+			textarea:focus {
+				outline: 1px solid -webkit-focus-ring-color;
+				outline-offset: -1px;
+			}
+
+			code {
+				font-family: var(--monaco-monospace-font);
+				color: var(--vscode-textPreformat-foreground);
+				background-color: var(--vscode-textPreformat-background);
+				padding: 1px 3px;
+				border-radius: 4px;
+			}
+
+			pre code {
+				padding: 0;
+			}
+
+			blockquote {
+				background: var(--vscode-textBlockQuote-background);
+				border-color: var(--vscode-textBlockQuote-border);
+			}
+
+			kbd {
+				background-color: var(--vscode-keybindingLabel-background);
+				color: var(--vscode-keybindingLabel-foreground);
+				border-style: solid;
+				border-width: 1px;
+				border-radius: 3px;
+				border-color: var(--vscode-keybindingLabel-border);
+				border-bottom-color: var(--vscode-keybindingLabel-bottomBorder);
+				box-shadow: inset 0 -1px 0 var(--vscode-widget-shadow);
+				vertical-align: middle;
+				padding: 1px 3px;
+			}
+
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+
+			::-webkit-scrollbar-corner {
+				background-color: var(--vscode-editor-background);
+			}
+
+			::-webkit-scrollbar-thumb {
+				background-color: var(--vscode-scrollbarSlider-background);
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background-color: var(--vscode-scrollbarSlider-hoverBackground);
+			}
+			::-webkit-scrollbar-thumb:active {
+				background-color: var(--vscode-scrollbarSlider-activeBackground);
+			}
+			::highlight(find-highlight) {
+				background-color: var(--vscode-editor-findMatchHighlightBackground);
+			}
+			::highlight(current-find-highlight) {
+				background-color: var(--vscode-editor-findMatchBackground);
+			}
+		}</style>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>README</title>
+<style>/* Force backgrounds to render in print / PDF so the content chrome
+   (code blocks, table headers) survives, rather than being dropped. */
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+:root { color-scheme: light; }
+/* On paper the page keeps its own single color: the paper tint is a
+   screen theme, and a content-height background would end mid-page
+   next to the white A4 margins. */
+html, body { background: #FFFFFF; }
+body {
+    color: #2B2620;
+    font-family: "American Typewriter", "Courier New", serif;
+    font-size: 11pt;
+    line-height: 1.55;
+    margin: 0;
+    padding: 48px 56px;
+    -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: bold; line-height: 1.25; margin: 1.2em 0 0.5em; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; color: #6B635A; }
+p { margin: 0 0 0.9em; }
+a { color: #9C6B2E; }
+code, pre { font-family: "Courier New", monospace; }
+code { background: #EAE2CF; padding: 0.1em 0.3em; border-radius: 4px; font-size: 0.92em; }
+pre { background: #EAE2CF; padding: 12px 14px; border-radius: 8px; overflow-x: auto; }
+/* In export, code wraps: paper can't scroll a too-wide block, so a
+   long line would otherwise be clipped at the block's edge. */
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+pre code { background: none; padding: 0; font-size: 0.92em; }
+/* Syntax highlighting (highlight.js). Deliberately NOT a stock hljs
+   theme — github / monokai and the rest are bright rainbows that fight
+   the warm-paper, American-Typewriter look. Instead three quiet tones
+   taken from the page's own palette: language keywords and the
+   structural names in the warm accent, comments in muted italic,
+   strings a softer shade of the ink; numbers and everything else stay
+   plain ink. The code face is still Courier New (inherited from `pre
+   code`). Applied by md-init.js over the live DOM, so it reaches
+   preview, print, PDF and HTML export — not EPUB, which snapshots this
+   HTML before any script runs, so its code blocks stay plain. */
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in, .hljs-literal,
+.hljs-type, .hljs-title, .hljs-section, .hljs-name, .hljs-doctag { color: #9C6B2E; }
+.hljs-comment, .hljs-quote, .hljs-meta { color: #6B635A; font-style: italic; }
+.hljs-string, .hljs-regexp, .hljs-symbol, .hljs-char,
+.hljs-attr, .hljs-attribute, .hljs-addition { color: #4A4034; }
+.hljs-deletion { color: #6B635A; text-decoration: line-through; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }
+blockquote { margin: 0 0 0.9em; padding-left: 14px; border-left: 4px solid #9C6B2E; color: #6B635A; }
+hr { border: none; border-top: 1px solid rgba(43,38,32,0.16); margin: 1.4em 0; }
+/* The author's `\newpage`: a dashed rule on screen; in export / print
+   it collapses to an invisible marker where a new page starts (the
+   PDF capture splits pages at it, and paginated printing breaks). */
+.md-pagebreak { border-top: 2px dashed rgba(43,38,32,0.16); margin: 1.6em 0; }
+table { border-collapse: collapse; margin: 0 0 0.9em; }
+th, td { border: 1px solid rgba(43,38,32,0.16); padding: 6px 12px; }
+th { background: #EAE2CF; }
+.md-list { margin: 0 0 0.9em; }
+.md-item { display: flex; gap: 0.5em; margin: 0.22em 0; }
+.md-marker { color: #6B635A; min-width: 1.5em; text-align: right; }
+.md-item.done { color: #6B635A; text-decoration: line-through; }
+/* Rich blocks: diagrams and display formulas render as SVG/markup, not
+   code — drop the code-block chrome, centre them, allow horizontal
+   scroll. Inline math (.md-mathi) flows with the text. */
+.mermaid, .plantuml, .graphviz, .plot, .md-mathd {
+    background: none; padding: 6px 0; margin: 0 0 0.9em;
+    overflow-x: auto; text-align: center;
+}
+.mermaid svg, .plantuml svg, .graphviz svg, .plot svg { max-width: 100%; height: auto; }
+/* Graphviz draws in plain black on a transparent ground (md-init.js
+   asks for `bgcolor=transparent`). Recolor it to the page's ink here,
+   in CSS, rather than passing colors to the engine: these are
+   presentation attributes, which any CSS rule outranks, and leaving
+   the engine's own attributes alone keeps the layout metrics — and so
+   the label positions it computed — exactly as Graphviz intended.
+
+   An author's own `fontcolor` / `color` survives: Graphviz writes
+   those out as attributes too, so each rule is scoped to the value the
+   engine emits when nothing was asked for — text with no fill of its
+   own, and explicit black. */
+.graphviz svg text:not([fill]) { fill: #2B2620; }
+.graphviz svg text[fill="black"] { fill: #2B2620; }
+.graphviz svg [stroke="black"] { stroke: #2B2620; }
+.graphviz svg [fill="black"]:not(text) { fill: #2B2620; }
+/* Footnotes. The references are superscript numerals in the running
+   text; the notes themselves sit under a rule at the foot of the
+   document, a size down, with a back-link to where they were cited. */
+.md-fnref a { text-decoration: none; color: #9C6B2E; }
+.md-footnotes { margin-top: 2em; font-size: 0.9em; color: #6B635A; }
+.md-footnotes hr { margin: 0 0 0.8em; }
+.md-footnotes ol { margin: 0; padding-left: 1.6em; }
+.md-footnotes li { margin: 0.35em 0; }
+.md-fnback { text-decoration: none; color: #9C6B2E; }
+/* Images render at their natural size, only capped to the page width;
+   height follows so the aspect ratio never distorts. */
+img { max-width: 100%; height: auto; }
+.md-mathd .katex-display { margin: 0; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 2px 0; }</style>
+
+</head>
+<body data-md-dark="0" role="document" class="vscode-dark" data-vscode-theme-kind="vscode-dark" data-vscode-theme-name="Dark 2026" data-vscode-theme-id="Dark 2026">
+<h1 id="module-01-core-syntax-mutability-strings--slicing-chi-tiết">Module 01: Core Syntax, Mutability, Strings &amp; Slicing (Chi tiết)</h1>
+<p>Module này giúp bạn nắm lại <strong>80–90% kiến thức cốt lõi của Python</strong> — những thứ chắc chắn xuất hiện trong mọi bài test Python đầu vào cũng như trong code AI hằng ngày.</p>
+<hr>
+<h2 id="1-biến-kiểu-dữ-liệu--ép-kiểu">1. Biến, Kiểu dữ liệu &amp; Ép kiểu</h2>
+<p>Python là ngôn ngữ <strong>Dynamic Typing</strong> (biến không gắn cố định kiểu, giá trị mới có kiểu), nhưng <strong>Strongly Typed</strong> (không tự động cộng <code>int</code> với <code>str</code> như JavaScript).</p>
+<pre><code class="language-python hljs" data-highlighted="yes">x = <span class="hljs-number">10</span>          <span class="hljs-comment"># int</span>
+y = <span class="hljs-number">3.14</span>        <span class="hljs-comment"># float</span>
+name = <span class="hljs-string">"AI"</span>     <span class="hljs-comment"># str</span>
+flag = <span class="hljs-literal">True</span>     <span class="hljs-comment"># bool (lưu ý: bool là lớp con của int! True == 1, False == 0)</span>
+empty = <span class="hljs-literal">None</span>    <span class="hljs-comment"># NoneType</span>
+
+<span class="hljs-comment"># Kiểm tra kiểu: ưu tiên isinstance() hơn type() vì hỗ trợ kế thừa</span>
+<span class="hljs-built_in">type</span>(x)               <span class="hljs-comment"># &lt;class 'int'&gt;</span>
+<span class="hljs-built_in">isinstance</span>(x, <span class="hljs-built_in">int</span>)    <span class="hljs-comment"># True</span>
+<span class="hljs-built_in">isinstance</span>(<span class="hljs-literal">True</span>, <span class="hljs-built_in">int</span>) <span class="hljs-comment"># True (bẫy hay gặp!)</span>
+
+<span class="hljs-comment"># Ép kiểu</span>
+<span class="hljs-built_in">int</span>(<span class="hljs-string">"42"</span>)       <span class="hljs-comment"># 42</span>
+<span class="hljs-built_in">int</span>(<span class="hljs-number">3.99</span>)       <span class="hljs-comment"># 3 (cắt phần thập phân, KHÔNG làm tròn!)</span>
+<span class="hljs-built_in">float</span>(<span class="hljs-string">"3.5"</span>)    <span class="hljs-comment"># 3.5</span>
+<span class="hljs-built_in">str</span>(<span class="hljs-number">100</span>)        <span class="hljs-comment"># "100"</span></code></pre>
+<blockquote>
+<p><strong>Lưu ý số thực (Floating-point precision):</strong> <code>0.1 + 0.2 == 0.3</code> trả về <code>False</code> (<code>0.30000000000000004</code>). Khi test hoặc so sánh loss/accuracy trong AI, luôn dùng <code>math.isclose(a, b)</code> hoặc <code>abs(a - b) &lt; 1e-9</code>.</p>
+</blockquote>
+<h3 id="bẫy-round-làm-tròn-kiểu-ngân-hàng-bankers-rounding">Bẫy <code>round()</code>: làm tròn kiểu "ngân hàng" (Banker's rounding)</h3>
+<p><code>round()</code> của Python <strong>không</strong> làm tròn ".5 lên" như ở trường. Khi đúng ở giữa, nó làm tròn về <strong>số chẵn gần nhất</strong>:</p>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-built_in">round</span>(<span class="hljs-number">2.5</span>)       <span class="hljs-comment"># 2  (không phải 3!)</span>
+<span class="hljs-built_in">round</span>(<span class="hljs-number">3.5</span>)       <span class="hljs-comment"># 4</span>
+<span class="hljs-built_in">round</span>(-<span class="hljs-number">2.5</span>)      <span class="hljs-comment"># -2</span>
+<span class="hljs-built_in">round</span>(<span class="hljs-number">2.675</span>, <span class="hljs-number">2</span>)  <span class="hljs-comment"># 2.67 (không phải 2.68!) vì 2.675 thực ra được lưu là 2.67499999...</span>
+
+<span class="hljs-comment"># So sánh 4 cách "bỏ phần thập phân":</span>
+<span class="hljs-keyword">import</span> math
+<span class="hljs-built_in">int</span>(-<span class="hljs-number">2.7</span>)         <span class="hljs-comment"># -2  (cắt bỏ, tiến về 0)</span>
+math.floor(-<span class="hljs-number">2.7</span>)  <span class="hljs-comment"># -3  (làm tròn xuống)</span>
+math.ceil(-<span class="hljs-number">2.2</span>)   <span class="hljs-comment"># -2  (làm tròn lên)</span>
+<span class="hljs-built_in">round</span>(-<span class="hljs-number">2.7</span>)       <span class="hljs-comment"># -3  (gần nhất)</span></code></pre>
+<blockquote>
+<p><strong>Góc nhìn AI:</strong> Khi hiển thị metric, hãy dùng f-string <code>f"{acc:.2f}"</code> thay vì <code>round()</code>. Khi cần làm tròn ".5 lên" chính xác (tiền tệ, chấm điểm), dùng <code>decimal.Decimal</code> với <code>ROUND_HALF_UP</code>.</p>
+</blockquote>
+<hr>
+<h2 id="2-toán-tử--các-bẫy-hay-gặp-trong-test-đầu-vào">2. Toán tử &amp; Các bẫy hay gặp trong Test đầu vào</h2>
+<h3 id="toán-tử-số-học">Toán tử số học</h3>
+<div class="md-list"><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>/</code> : Chia thực, <strong>luôn trả về <code>float</code></strong> (<code>4 / 2 == 2.0</code>).</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>//</code>: Chia lấy phần nguyên làm tròn xuống (floor division): <code>7 // 2 == 3</code>, nhưng <code>-7 // 2 == -4</code> (làm tròn về âm vô cực, rất hay bị hỏi!).</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>%</code> : Chia lấy dư: <code>7 % 2 == 1</code>.</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>**</code>: Lũy thừa: <code>2 ** 3 == 8</code>.</span></div></div>
+<h3 id="-vs-is-cực-kỳ-hay-ra-trong-bài-test"><code>==</code> vs <code>is</code> (Cực kỳ hay ra trong bài test!)</h3>
+<div class="md-list"><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>==</code>: So sánh <strong>giá trị</strong> (hai object có bằng nhau về nội dung không).</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>is</code>: So sánh <strong>danh tính / địa chỉ bộ nhớ</strong> (<code>id(a) == id(b)</code> — có phải cùng một object không).</span></div></div>
+<pre><code class="language-python hljs" data-highlighted="yes">a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+a == b   <span class="hljs-comment"># True (cùng giá trị)</span>
+a <span class="hljs-keyword">is</span> b   <span class="hljs-comment"># False (hai list khác nhau trong bộ nhớ)</span>
+
+<span class="hljs-comment"># Luôn dùng `is` hoặc `is not` khi kiểm tra None:</span>
+x = <span class="hljs-literal">None</span>
+<span class="hljs-keyword">if</span> x <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Rỗng"</span>)</code></pre>
+<h3 id="so-sánh-chuỗi-chained-comparison--short-circuit">So sánh chuỗi (Chained Comparison) &amp; Short-circuit</h3>
+<pre><code class="language-python hljs" data-highlighted="yes">score = <span class="hljs-number">85</span>
+<span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= score &lt;= <span class="hljs-number">100</span>:   <span class="hljs-comment"># Hợp lệ trong Python! Tương đương (0 &lt;= score) and (score &lt;= 100)</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Hợp lệ"</span>)
+
+<span class="hljs-comment"># `or` và `and` trả về GIÁ TRỊ của toán hạng quyết định kết quả, không chỉ True/False:</span>
+name = <span class="hljs-string">""</span> <span class="hljs-keyword">or</span> <span class="hljs-string">"Anonymous"</span>     <span class="hljs-comment"># "Anonymous"</span>
+val = <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-number">100</span>              <span class="hljs-comment"># 0 (dừng ngay ở 0, không đánh giá vế sau)</span></code></pre>
+<hr>
+<h2 id="3-truthiness--falsy-values">3. Truthiness &amp; Falsy Values</h2>
+<p>Trong câu lệnh <code>if</code>, Python tự động đánh giá mọi object thành <code>True</code> hoặc <code>False</code>.<br>
+Chỉ có <strong>8 nhóm giá trị Falsy</strong> (còn lại đều là Truthy):</p>
+<div class="md-list"><div class="md-item" style="padding-left:0.00em"><span class="md-marker">1.</span><span><code>False</code></span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">2.</span><span><code>None</code></span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">3.</span><span><code>0</code>, <code>0.0</code>, <code>0j</code></span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">4.</span><span><code>""</code> (chuỗi rỗng)</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">5.</span><span><code>[]</code> (list rỗng)</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">6.</span><span><code>()</code> (tuple rỗng)</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">7.</span><span><code>{}</code> (dict rỗng)</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">8.</span><span><code>set()</code>, <code>range(0)</code></span></div></div>
+<pre><code class="language-python hljs" data-highlighted="yes">items = []
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> items:   <span class="hljs-comment"># Chuẩn Pythonic (thay vì viết `if len(items) == 0:`)</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Danh sách rỗng"</span>)</code></pre>
+<hr>
+<h2 id="4-mutability-khả-biến--bẫy-copy-dữ-liệu">4. Mutability (Khả biến) &amp; Bẫy Copy dữ liệu</h2>
+<table><thead><tr><th style="text-align:left">Nhóm</th><th style="text-align:left">Kiểu dữ liệu</th><th style="text-align:left">Đặc điểm</th></tr></thead><tbody><tr><td style="text-align:left"><strong>Immutable (Bất biến)</strong></td><td style="text-align:left"><code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code>, <code>tuple</code>, <code>frozenset</code>, <code>None</code></td><td style="text-align:left">Không thể sửa nội dung tại chỗ. Mọi phép biến đổi đều tạo object mới.</td></tr><tr><td style="text-align:left"><strong>Mutable (Khả biến)</strong></td><td style="text-align:left"><code>list</code>, <code>dict</code>, <code>set</code></td><td style="text-align:left">Có thể thêm/sửa/xóa trực tiếp tại cùng địa chỉ bộ nhớ.</td></tr></tbody></table>
+<h3 id="shallow-copy-vs-deep-copy">Shallow Copy vs Deep Copy</h3>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-keyword">import</span> copy
+
+<span class="hljs-comment"># 1. Gán trực tiếp: chung vùng nhớ</span>
+a = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]]
+b = a
+b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">99</span>   <span class="hljs-comment"># a[0][0] cũng thành 99!</span>
+
+<span class="hljs-comment"># 2. Shallow copy (a.copy(), a[:], list(a)): chỉ copy lớp ngoài!</span>
+c = a.copy()
+c.append([<span class="hljs-number">5</span>, <span class="hljs-number">6</span>])  <span class="hljs-comment"># a KHÔNG bị thêm [5, 6]</span>
+c[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">777</span>     <span class="hljs-comment"># NHƯNG list con bên trong vẫn dùng chung -&gt; a[0][0] thành 777!</span>
+
+<span class="hljs-comment"># 3. Deep copy: copy độc lập hoàn toàn mọi lớp lồng nhau</span>
+d = copy.deepcopy(a)
+d[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>       <span class="hljs-comment"># a hoàn toàn an toàn!</span></code></pre>
+<h3 id="bẫy--với-list-hay-ra-trong-test">Bẫy <code>+=</code> với list (Hay ra trong test!)</h3>
+<p>Với list, <code>x += [4]</code> <strong>sửa tại chỗ</strong> (giống <code>x.extend([4])</code>), còn <code>x = x + [4]</code> <strong>tạo list mới</strong>:</p>
+<pre><code class="language-python hljs" data-highlighted="yes">x = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+y = x
+x += [<span class="hljs-number">4</span>]        <span class="hljs-comment"># sửa chính object mà cả x và y cùng trỏ tới</span>
+<span class="hljs-built_in">print</span>(y)        <span class="hljs-comment"># [1, 2, 3, 4]  -&gt; y bị đổi theo!</span>
+
+x = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+y = x
+x = x + [<span class="hljs-number">4</span>]     <span class="hljs-comment"># x trỏ sang list MỚI, y vẫn giữ list cũ</span>
+<span class="hljs-built_in">print</span>(y)        <span class="hljs-comment"># [1, 2, 3]</span>
+
+<span class="hljs-comment"># Với kiểu immutable (int, str, tuple), += luôn tạo object mới:</span>
+s = <span class="hljs-string">"ab"</span>; t = s; s += <span class="hljs-string">"c"</span>
+<span class="hljs-built_in">print</span>(t)        <span class="hljs-comment"># "ab"</span></code></pre>
+<h3 id="bẫy-tạo-ma-trận-2d-kinh-điển-trong-test-python--ai">Bẫy tạo ma trận 2D (Kinh điển trong Test Python &amp; AI)</h3>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-comment"># SAI: Cả 3 hàng trỏ tới CÙNG 1 list!</span>
+bad_grid = [[<span class="hljs-number">0</span>] * <span class="hljs-number">3</span>] * <span class="hljs-number">3</span>
+bad_grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>
+<span class="hljs-built_in">print</span>(bad_grid)  <span class="hljs-comment"># [[1, 0, 0], [1, 0, 0], [1, 0, 0]] -&gt; Toang!</span>
+
+<span class="hljs-comment"># ĐÚNG: Dùng list comprehension để tạo 3 list độc lập</span>
+good_grid = [[<span class="hljs-number">0</span>] * <span class="hljs-number">3</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>)]
+good_grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>
+<span class="hljs-built_in">print</span>(good_grid) <span class="hljs-comment"># [[1, 0, 0], [0, 0, 0], [0, 0, 0]]</span></code></pre>
+<blockquote>
+<p><strong>Góc nhìn AI:</strong> Khi chuẩn hóa dữ liệu (normalize) hoặc augment ảnh/text, nếu không copy đúng cách, bạn sẽ vô tình làm hỏng tập dữ liệu gốc hoặc làm rò rỉ dữ liệu giữa train và validation.</p>
+</blockquote>
+<hr>
+<h2 id="5-string-str--f-strings">5. String (<code>str</code>) &amp; F-strings</h2>
+<p>Chuỗi trong Python là <strong>immutable</strong> (không thể làm <code>s[0] = "A"</code>).</p>
+<h3 id="các-method-bắt-buộc-phải-nhớ-dùng-suốt-trong-làm-sạch-dữ-liệu-nlp--test">Các method bắt buộc phải nhớ (dùng suốt trong làm sạch dữ liệu NLP &amp; Test)</h3>
+<pre><code class="language-python hljs" data-highlighted="yes">s = <span class="hljs-string">"  Hello, Python AI!  "</span>
+
+s.strip()                <span class="hljs-comment"># "Hello, Python AI!" (xóa khoảng trắng 2 đầu; có lstrip/rstrip)</span>
+s.lower()                <span class="hljs-comment"># "  hello, python ai!  " (chuyển thường; có upper, title)</span>
+s.strip().split(<span class="hljs-string">", "</span>)    <span class="hljs-comment"># ["Hello", "Python AI!"] (tách chuỗi thành list)</span>
+<span class="hljs-string">"-"</span>.join([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>])<span class="hljs-comment"># "a-b-c" (nối list chuỗi — nhanh hơn cộng chuỗi += rất nhiều!)</span>
+s.replace(<span class="hljs-string">"AI"</span>, <span class="hljs-string">"ML"</span>)    <span class="hljs-comment"># Thay thế chuỗi con</span>
+s.find(<span class="hljs-string">"Python"</span>)         <span class="hljs-comment"># Trả về index đầu tiên (hoặc -1 nếu không thấy; khác index() ở chỗ không raise lỗi)</span>
+<span class="hljs-string">"AI"</span> <span class="hljs-keyword">in</span> s                <span class="hljs-comment"># True (kiểm tra chuỗi con)</span>
+s.strip().startswith(<span class="hljs-string">"Hello"</span>)  <span class="hljs-comment"># True (có endswith)</span>
+<span class="hljs-string">"12345"</span>.isdigit()        <span class="hljs-comment"># True (kiểm tra toàn số)</span></code></pre>
+<h3 id="f-strings-định-dạng-chuỗi-hiện-đại">F-strings (Định dạng chuỗi hiện đại)</h3>
+<pre><code class="language-python hljs" data-highlighted="yes">epoch, loss, acc = <span class="hljs-number">3</span>, <span class="hljs-number">0.04567</span>, <span class="hljs-number">0.925</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Epoch <span class="hljs-subst">{epoch:02d}</span> | Loss: <span class="hljs-subst">{loss:<span class="hljs-number">.4</span>f}</span> | Acc: <span class="hljs-subst">{acc:<span class="hljs-number">.2</span>%}</span>"</span>)
+<span class="hljs-comment"># -&gt; Epoch 03 | Loss: 0.0457 | Acc: 92.50%</span>
+
+<span class="hljs-comment"># Debug nhanh biến và giá trị:</span>
+lr = <span class="hljs-number">3e-4</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"<span class="hljs-subst">{lr=}</span>"</span>)          <span class="hljs-comment"># -&gt; lr=0.0003</span></code></pre>
+<hr>
+<h2 id="6-slicing-startstopstep">6. Slicing (<code>[start:stop:step]</code>)</h2>
+<p>Quy tắc vàng: <strong>Lấy từ <code>start</code> đến trước <code>stop</code></strong> (nửa khoảng <code>[start, stop)</code>).</p>
+<pre><code class="language-python hljs" data-highlighted="yes">arr = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>, <span class="hljs-number">50</span>, <span class="hljs-number">60</span>]
+
+arr[<span class="hljs-number">0</span>]       <span class="hljs-comment"># 10 (index dương đếm từ 0)</span>
+arr[-<span class="hljs-number">1</span>]      <span class="hljs-comment"># 60 (index âm đếm từ cuối: -1 là phần tử cuối)</span>
+arr[<span class="hljs-number">1</span>:<span class="hljs-number">4</span>]     <span class="hljs-comment"># [20, 30, 40]</span>
+arr[:<span class="hljs-number">3</span>]      <span class="hljs-comment"># [10, 20, 30] (mặc định start = 0)</span>
+arr[<span class="hljs-number">3</span>:]      <span class="hljs-comment"># [40, 50, 60] (mặc định stop = len(arr))</span>
+arr[-<span class="hljs-number">2</span>:]     <span class="hljs-comment"># [50, 60] (2 phần tử cuối)</span>
+arr[::<span class="hljs-number">2</span>]     <span class="hljs-comment"># [10, 30, 50] (bước nhảy 2)</span>
+arr[::-<span class="hljs-number">1</span>]    <span class="hljs-comment"># [60, 50, 40, 30, 20, 10] (đảo ngược list/str)</span>
+
+<span class="hljs-comment"># Điểm khác biệt hay hỏi:</span>
+<span class="hljs-comment"># arr[100]      -&gt; IndexError!</span>
+<span class="hljs-comment"># arr[100:200]  -&gt; [] (Slicing vượt biên KHÔNG bao giờ báo lỗi!)</span></code></pre>
+<blockquote>
+<p><strong>Góc nhìn AI:</strong> Cú pháp slicing này giống hệt khi bạn cắt chiều dữ liệu trong NumPy/PyTorch (ví dụ: <code>X_train, X_test = X[:800], X[800:]</code> hoặc lấy token cuối <code>logits[:, -1, :]</code>).</p>
+</blockquote>
+<hr>
+<h2 id="7-control-flow-if-for-while-forelse">7. Control Flow (<code>if</code>, <code>for</code>, <code>while</code>, <code>for...else</code>)</h2>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-comment"># 1. Toán tử 3 ngôi (Ternary)</span>
+device = <span class="hljs-string">"cuda"</span> <span class="hljs-keyword">if</span> has_gpu <span class="hljs-keyword">else</span> <span class="hljs-string">"cpu"</span>
+
+<span class="hljs-comment"># 2. range(start, stop, step)</span>
+<span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>))         <span class="hljs-comment"># [0, 1, 2, 3, 4]</span>
+<span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">3</span>))  <span class="hljs-comment"># [2, 5, 8]</span>
+<span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>))  <span class="hljs-comment"># [5, 4, 3, 2, 1]</span>
+
+<span class="hljs-comment"># 3. `for ... else` (Hay ra trong đề test Python!)</span>
+<span class="hljs-comment"># Khối `else` CHỈ chạy nếu vòng lặp kết thúc tự nhiên (KHÔNG bị `break`).</span>
+nums = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>]
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> nums:
+    <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Tìm thấy số lẻ!"</span>)
+        <span class="hljs-keyword">break</span>
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Tất cả đều là số chẵn!"</span>)  <span class="hljs-comment"># Dòng này sẽ chạy</span></code></pre>
+<h3 id="while-break-continue"><code>while</code>, <code>break</code>, <code>continue</code></h3>
+<div class="md-list"><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>while điều_kiện:</code> lặp <strong>khi chưa biết trước số vòng</strong> (ví dụ: train đến khi loss đủ nhỏ, đọc đến khi hết dữ liệu).</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>break</code>: <strong>thoát hẳn</strong> vòng lặp gần nhất.</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>continue</code>: <strong>bỏ qua phần còn lại</strong> của vòng hiện tại, nhảy sang vòng kế tiếp.</span></div><div class="md-item" style="padding-left:0.00em"><span class="md-marker">•</span><span><code>while</code> cũng có <code>else</code>, với cùng quy tắc: chỉ chạy khi vòng lặp <strong>không</strong> bị <code>break</code>.</span></div></div>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-comment"># Ví dụ: giảm learning rate đến khi nhỏ hơn ngưỡng</span>
+lr, steps = <span class="hljs-number">1.0</span>, <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> lr &gt;= <span class="hljs-number">0.01</span>:
+    lr *= <span class="hljs-number">0.5</span>
+    steps += <span class="hljs-number">1</span>
+<span class="hljs-built_in">print</span>(steps, lr)     <span class="hljs-comment"># 7 0.0078125</span>
+
+<span class="hljs-comment"># continue: bỏ qua mẫu lỗi, break: dừng khi gặp dấu hiệu kết thúc</span>
+<span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> [<span class="hljs-string">"a"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"&lt;END&gt;"</span>, <span class="hljs-string">"c"</span>]:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> line:
+        <span class="hljs-keyword">continue</span>      <span class="hljs-comment"># bỏ dòng trống, sang vòng tiếp</span>
+    <span class="hljs-keyword">if</span> line == <span class="hljs-string">"&lt;END&gt;"</span>:
+        <span class="hljs-keyword">break</span>         <span class="hljs-comment"># dừng hẳn, "c" không bao giờ được xử lý</span>
+    <span class="hljs-built_in">print</span>(line)       <span class="hljs-comment"># in ra: a, b</span>
+
+<span class="hljs-comment"># Vòng lặp vô hạn có điểm thoát: mẫu rất hay gặp</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    cmd = <span class="hljs-built_in">input</span>(<span class="hljs-string">"&gt; "</span>)
+    <span class="hljs-keyword">if</span> cmd == <span class="hljs-string">"quit"</span>:
+        <span class="hljs-keyword">break</span></code></pre>
+<blockquote>
+<p><strong>Bẫy:</strong> <code>break</code> và <code>continue</code> chỉ tác động lên vòng lặp <strong>gần nhất</strong> (vòng trong cùng). Muốn thoát cả 2 vòng lồng nhau, hãy tách vòng lặp ra thành hàm rồi dùng <code>return</code>.</p>
+</blockquote>
+<h3 id="walrus-operator--python-38">Walrus operator <code>:=</code> (Python 3.8+)</h3>
+<p>Toán tử <code>:=</code> vừa <strong>gán</strong> vừa <strong>trả về giá trị</strong> ngay trong biểu thức, giúp tránh tính một thứ hai lần:</p>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-comment"># Không có walrus: phải gọi len() 2 lần hoặc tách thêm dòng</span>
+data = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">15</span>))
+<span class="hljs-keyword">if</span> (n := <span class="hljs-built_in">len</span>(data)) &gt; <span class="hljs-number">10</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Dữ liệu quá dài (<span class="hljs-subst">{n}</span> phần tử)"</span>)
+
+<span class="hljs-comment"># Đọc file theo từng khối đến khi hết</span>
+<span class="hljs-comment"># while (chunk := f.read(1024)):</span>
+<span class="hljs-comment">#     process(chunk)</span>
+
+<span class="hljs-comment"># Trong comprehension: tính một lần, vừa lọc vừa dùng</span>
+scores = [s <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>] <span class="hljs-keyword">if</span> (s := x * x) &gt; <span class="hljs-number">4</span>]   <span class="hljs-comment"># [9, 16]</span></code></pre>
+<hr>
+<h2 id="8-match-case-structural-pattern-matching-python-310">8. <code>match-case</code>: Structural Pattern Matching (Python 3.10+)</h2>
+<p><code>match</code> <strong>không chỉ</strong> là <code>switch</code> của C/Java: nó so khớp được cả <strong>cấu trúc</strong> (list, tuple, dict, class) và <strong>bóc tách</strong> giá trị ra biến.</p>
+<pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-keyword">def</span> <span class="hljs-title function_">handle</span>(<span class="hljs-params">command: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">str</span>:
+    <span class="hljs-keyword">match</span> command.split():
+        <span class="hljs-keyword">case</span> [<span class="hljs-string">"train"</span>, epochs] <span class="hljs-keyword">if</span> epochs.isdigit():   <span class="hljs-comment"># khớp list 2 phần tử + điều kiện (guard)</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Train <span class="hljs-subst">{epochs}</span> epochs"</span>
+        <span class="hljs-keyword">case</span> [<span class="hljs-string">"eval"</span>]:                                 <span class="hljs-comment"># khớp đúng list ["eval"]</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Evaluate"</span>
+        <span class="hljs-keyword">case</span> [<span class="hljs-string">"save"</span>, *paths]:                         <span class="hljs-comment"># *paths gom phần còn lại</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Save to <span class="hljs-subst">{paths}</span>"</span>
+        <span class="hljs-keyword">case</span> [<span class="hljs-string">"quit"</span> | <span class="hljs-string">"exit"</span>]:                        <span class="hljs-comment"># | nghĩa là "hoặc"</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Bye"</span>
+        <span class="hljs-keyword">case</span> _:                                        <span class="hljs-comment"># _ = mặc định (khớp mọi thứ)</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Unknown"</span>
+
+handle(<span class="hljs-string">"train 5"</span>)         <span class="hljs-comment"># "Train 5 epochs"</span>
+handle(<span class="hljs-string">"save a.pt b.pt"</span>)  <span class="hljs-comment"># "Save to ['a.pt', 'b.pt']"</span>
+handle(<span class="hljs-string">"train abc"</span>)       <span class="hljs-comment"># "Unknown" (guard thất bại)</span>
+
+<span class="hljs-comment"># Khớp dict: chỉ cần có các key được liệt kê (key thừa vẫn khớp)</span>
+<span class="hljs-keyword">match</span> {<span class="hljs-string">"type"</span>: <span class="hljs-string">"image"</span>, <span class="hljs-string">"size"</span>: <span class="hljs-number">224</span>, <span class="hljs-string">"extra"</span>: <span class="hljs-number">1</span>}:
+    <span class="hljs-keyword">case</span> {<span class="hljs-string">"type"</span>: <span class="hljs-string">"image"</span>, <span class="hljs-string">"size"</span>: s}:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Ảnh kích thước <span class="hljs-subst">{s}</span>"</span>)</code></pre>
+<blockquote>
+<p><strong>Bẫy:</strong> <code>case x:</code> (tên biến trần) <strong>luôn khớp</strong> và gán giá trị vào <code>x</code>; nó <strong>không</strong> so sánh với biến <code>x</code> có sẵn bên ngoài. Muốn so sánh với một hằng số, hãy dùng giá trị trực tiếp (<code>case 0:</code>) hoặc tên có dấu chấm (<code>case Color.RED:</code>).</p>
+</blockquote>
+<hr>
+<h2 id="thực-hành">Thực hành</h2>
+<p>Mở <a href="./exercises.py" title="./exercises.py">exercises.py</a>, hoàn thành các hàm <code># TODO</code> và chạy kiểm tra:</p>
+<pre><code class="language-bash hljs" data-highlighted="yes">python3 01_python_core_and_slicing/exercises.py</code></pre>
+
+
+
+</body></html>

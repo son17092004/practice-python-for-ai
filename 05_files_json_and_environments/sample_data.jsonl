@@ -1,0 +1,5 @@
+{"id": 1, "text": "Python is essential for AI.", "label": "positive"}
+{"id": 2, "text": "   ", "label": "empty"}
+{invalid json line}
+{"id": 3, "text": "Deep learning uses neural networks.", "label": "positive"}
+{"id": 4, "text": "Overfitting hurts generalization.", "label": "negative"}

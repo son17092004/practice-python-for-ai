@@ -1,0 +1,5 @@
+{"id": "doc1", "title": "PyTorch Basics", "text": "PyTorch uses tensors and autograd for building deep learning neural networks."}
+{"id": "doc2", "title": "NumPy Arrays", "text": "NumPy provides fast vectorized matrix operations and linear algebra in Python."}
+{"id": "doc3", "title": "RAG Architecture", "text": "Retrieval Augmented Generation combines vector search with large language models."}
+{"id": "doc4", "title": "Python Environments", "text": "Use uv or venv to isolate Python packages and dependencies for AI projects."}
+{"id": "doc5", "title": "Transformer Attention", "text": "Self attention computes dot product similarity between query and key vectors."}
